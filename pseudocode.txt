@@ -1,0 +1,5 @@
+Take in arguments - can be done in the main func
+
+Open the file whic is the first arguments and read the file and return it as an array of strings(lines in the file)
+
+Check for functions and execute
