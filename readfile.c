@@ -17,7 +17,7 @@ char **read_line(char *filename)
         exit(EXIT_FAILURE);
     array_of_read_lines[0] = (char *)malloc(bufsize);
 
-    while (fgets(array_of_read_lines[n], bufsize, fd) != NULL)
+   /* while (fgets(array_of_read_lines[n], bufsize, fd) != NULL)
         {
             if (n > 0)
                 array_of_read_lines[n] = (char *)malloc(bufsize);
@@ -27,7 +27,9 @@ char **read_line(char *filename)
         }
     for(i = 0; i  < n; i++)
         printf("%s\n", array_of_read_lines[i]);
-    /*return (array_of_read_lines);*/
+    *//*return (array_of_read_lines);*/
+      for (n = 0; getline(&(array_of_read_lines[n]), &bufsize, fd) > 0; n++)      
+            printf("%s", (array_of_read_lines[n]));
 }
 
 int main (int ac, char **av)
